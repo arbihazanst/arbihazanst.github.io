@@ -75,34 +75,40 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
   }
 }
 .hero {
-  display: block;
+  display: grid;
+  grid-template-columns: minmax(600px, 1.15fr) minmax(420px, 0.85fr);
+  gap: clamp(2rem, 4vw, 5rem);
+  align-items: center;
 }
 
 .hero-content {
-  max-width: 1080px;
+  min-width: 0;
 }
 
 .hero-identity {
-  display: flex;
-  align-items: flex-start;
-  gap: clamp(1.5rem, 3vw, 3rem);
+  display: grid;
+  grid-template-columns: 135px minmax(0, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+  align-items: center;
 }
 
 .hero-identity h1 {
   margin: 0;
+  font-size: clamp(4rem, 5.6vw, 6.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
 }
 
 .profile-photo {
-  flex: 0 0 clamp(130px, 12vw, 175px);
-  width: clamp(130px, 12vw, 175px);
-  margin: 0.5rem 0 0;
   position: relative;
+  width: 135px;
+  margin: 0;
 }
 
 .profile-photo::before {
   content: "";
   position: absolute;
-  inset: 8px -8px -8px 8px;
+  inset: 7px -7px -7px 7px;
   border: 1px solid var(--red);
   z-index: -1;
 }
@@ -116,24 +122,57 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
   border: 1px solid rgba(18, 51, 105, 0.2);
 }
 
-@media (max-width: 700px) {
+.map {
+  width: 100%;
+  min-width: 0;
+  align-self: center;
+}
+
+.knowledge-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 570px;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: minmax(500px, 1fr) minmax(350px, 0.75fr);
+    gap: 2rem;
+  }
+
   .hero-identity {
-    gap: 1.25rem;
+    grid-template-columns: 110px minmax(0, 1fr);
   }
 
   .profile-photo {
-    flex-basis: 95px;
-    width: 95px;
+    width: 110px;
+  }
+
+  .hero-identity h1 {
+    font-size: clamp(3.5rem, 5.8vw, 5rem);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
   .hero-identity {
-    flex-direction: column;
+    grid-template-columns: 100px minmax(0, 1fr);
   }
 
   .profile-photo {
-    width: 120px;
+    width: 100px;
+  }
+
+  .hero-identity h1 {
+    font-size: clamp(3rem, 11vw, 4.5rem);
+  }
+
+  .map {
+    margin-top: 2rem;
   }
 }
 </style>
@@ -179,7 +218,6 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
 
 <text class="kg-caption" x="310" y="558" text-anchor="middle">FROM METHODS → RESEARCH PROGRAMMES → PUBLISHED CONTRIBUTIONS</text>
 </svg></div></section>
-<div class="hero index" id="research"><article><span class="num">01 /</span><h2>LLM Evaluation &amp; Robustness</h2><p>Adversarial behaviour, annotation quality, benchmarking, and explainability.</p></article><article><span class="num">02 /</span><h2>Low-Resource &amp; Multilingual NLP</h2><p>Language inclusion, named entity recognition, and multilingual understanding.</p></article><article><span class="num">03 /</span><h2>RAG &amp; Knowledge Systems</h2><p>Curated thematic corpora, Quranic studies, and dependable retrieval.</p></article><article><span class="num">04 /</span><h2>AI Applications &amp; Forecasting</h2><p>Time series, energy, agriculture, IoT, markets, and multimodal moderation.</p></article></div>
 
 <section class="section" id="profile"><div class="intro"><div><p class="kicker">Academic profile</p><h2>Language technology with global reach and local purpose.</h2></div><p>Arbi Haza Nasution is a computational linguistics and natural language processing scholar whose current research focuses on LLMs and Retrieval-Augmented Generation (RAG) for multilingual and low-resource language understanding. He earned his Ph.D. in Social Informatics from Kyoto University (2018) and his M.IT. in Management Information Systems (2012) and B.IT. in Computer Science (2010) from the National University of Malaysia (Universiti Kebangsaan Malaysia, UKM). He is currently a Professor in the Department of Informatics Engineering, Universitas Islam Riau, Indonesia. His research centers on bilingual lexicon induction, multilingual machine translation, and language technologies for low‑resource languages. In recognition of his contributions to inclusive language technologies and the preservation of low-resource languages, he was invited by UNESCO to participate in the first Language Technologies for All (LT4All) conference in 2021, and later again in 2025 for the second LT4All at UNESCO Headquarters in Paris.</p></div>
 <div class="records"><article class="record"><time>Current</time><div><h3>Director, Directorate of Research and Community Service</h3><p>Universitas Islam Riau</p></div><p>Leads institutional research development, grants, publication, innovation, and community-service programmes.</p></article><article class="record"><time>Current</time><div><h3>Professor of Artificial Intelligence</h3><p>Department of Informatics Engineering · UIR</p></div><p>Teaching, research, supervision, curriculum development, and scholarly service in AI, NLP, data science, and machine learning.</p></article><article class="record"><time>2019</time><div><h3>Visiting Professor and Fellow</h3><p>Universiti Teknologi MARA, Perlis, Malaysia</p></div><p>Academic exchange, teaching, and research engagement at Arau Campus, 28 April–3 May 2019.</p></article><article class="record"><time>2018</time><div><h3>Ph.D. in Social Informatics</h3><p>Kyoto University, Japan</p></div><p>Dissertation: <em>Bilingual Lexicon Induction Framework for Closely Related Languages.</em> Indonesian Presidential Scholarship (LPDP).</p></article><article class="record"><time>2012</time><div><h3>M.IT. in Management Information Systems</h3><p>Universiti Kebangsaan Malaysia</p></div><p>Graduate study in management information systems and information technology.</p></article><article class="record"><time>2010</time><div><h3>B.IT. in Computer Science</h3><p>Universiti Kebangsaan Malaysia</p></div><p>Undergraduate study in computer science.</p></article></div></section>
