@@ -19,7 +19,35 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
 .filters{display:flex;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:32px}.filter{border:0;border-right:1px solid var(--line);background:transparent;padding:15px 17px;cursor:pointer;color:#303438}.filter.active,.filter:hover{background:var(--indigo);color:#fff}.category{margin-top:34px}.category h3{font:400 29px Georgia,serif;margin:0 0 15px}.pubs{list-style:none;margin:0;padding:0;counter-reset:item}.pubs li{counter-increment:item;border-top:1px solid var(--line);padding:18px 0 18px 52px;position:relative;font:15px/1.55 Georgia,serif}.pubs li:before{content:counter(item,decimal-leading-zero);position:absolute;left:0;top:20px;color:var(--indigo);font:10px Arial;letter-spacing:.14em}.pubs em{color:var(--muted)}.pubs a{color:var(--indigo);text-decoration:underline;text-decoration-color:rgba(11,45,107,.3);text-underline-offset:3px}.category.hidden{display:none}
 .contact{text-align:center;margin-left:168px;padding:135px 24px;border-top:1px solid var(--line);background:linear-gradient(90deg,rgba(11,45,107,.04),transparent)}.contact h2{font:400 clamp(50px,7vw,92px)/.98 Georgia,serif;letter-spacing:-.04em;margin:24px 0}.contact p{color:var(--muted);font-size:17px;line-height:1.7}.contact-links{display:grid;grid-template-columns:repeat(3,1fr);max-width:850px;margin:35px auto 0;border:1px solid var(--line)}.contact-links a{padding:20px;border-right:1px solid var(--line);color:var(--indigo)}.contact-links a:last-child{border-right:0}footer{height:100px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4.5vw;color:var(--muted);font-size:12px}
 @media(max-width:1000px){.rail{display:none}header,main,footer,.contact{margin-left:0}header{padding:0 24px;height:84px}nav{gap:22px}.hero,.section{width:min(100% - 40px,760px)}.hero{grid-template-columns:1fr}.hero h1{font-size:78px}.map{width:580px;max-width:90vw}.intro{grid-template-columns:1fr;gap:8px}.index{grid-template-columns:1fr 1fr}.record{grid-template-columns:100px 1fr}.record>p{grid-column:2}.grants{grid-template-columns:1fr}.courses{grid-template-columns:1fr 1fr}.detail ul{columns:1}}
-@media(max-width:620px){header nav a:nth-child(-n+3){display:none}.hero,.section{width:calc(100% - 28px)}.hero h1{font-size:52px}.hero{min-height:auto;padding:60px 0}.role{font-size:17px}.lead{font-size:19px}.index{grid-template-columns:1fr}.index article{border-right:0;border-bottom:1px solid var(--line)}.map{height:340px}.section{padding:78px 0}.record{grid-template-columns:1fr;gap:7px}.record>p{grid-column:1}.courses{grid-template-columns:1fr}.course{border-right:0;border-bottom:1px solid var(--line)}.filters{display:grid;grid-template-columns:1fr 1fr}.filter{border-bottom:1px solid var(--line)}.contact-links{grid-template-columns:1fr}.contact-links a{border-right:0;border-bottom:1px solid var(--line)}}
+@media(max-width:620px){header {
+    height: auto;
+    min-height: 76px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  header nav {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    overflow-x: auto;
+    padding: 0 14px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  header nav a,
+  header nav a:nth-child(-n+3) {
+    display: block;
+    flex: 0 0 auto;
+    padding: 24px 15px 13px;
+    white-space: nowrap;
+    font-size: 14px;
+  }.hero,.section{width:calc(100% - 28px)}.hero h1{font-size:52px}.hero{min-height:auto;padding:60px 0}.role{font-size:17px}.lead{font-size:19px}.index{grid-template-columns:1fr}.index article{border-right:0;border-bottom:1px solid var(--line)}.map{height:340px}.section{padding:78px 0}.record{grid-template-columns:1fr;gap:7px}.record>p{grid-column:1}.courses{grid-template-columns:1fr}.course{border-right:0;border-bottom:1px solid var(--line)}.filters{display:grid;grid-template-columns:1fr 1fr}.filter{border-bottom:1px solid var(--line)}.contact-links{grid-template-columns:1fr}.contact-links a{border-right:0;border-bottom:1px solid var(--line)}}
 .call-for-papers {
   display: grid;
   grid-template-columns: 92px 1fr;
