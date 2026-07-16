@@ -130,20 +130,14 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
 .profile-photo {
   position: relative;
   width: 135px;
+  height: auto;
   margin: 0;
-}
-
-.profile-photo::before {
-  content: "";
-  position: absolute;
-  inset: 7px -7px -7px 7px;
-  border: 1px solid var(--red);
-  z-index: -1;
 }
 
 .profile-photo img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
@@ -214,7 +208,15 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
 <main>
 <section class="hero" id="top"><div class="hero-content"><div class="hero-identity">
       <figure class="profile-photo">
-        <img src="./arbi.webp" width="400" height="500" alt="Professor Arbi Haza Nasution">        
+    <img
+    src="./arbi.webp"
+    width="400"
+    height="500"
+    alt="Professor Arbi Haza Nasution"
+    decoding="async"
+    fetchpriority="high"
+  >
+        
       </figure>
 
       <h1>ARBI HAZA<br>NASUTION</h1>
