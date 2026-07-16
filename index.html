@@ -74,11 +74,37 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
     width: 70px;
   }
 }
-.profile-photo {
-  align-self: end;
+.hero {
+  display: block;
+}
+
+.hero-content {
+  max-width: 1080px;
+}
+
+.hero-identity {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.hero-identity h1 {
   margin: 0;
-  max-width: 340px;
-  justify-self: center;
+}
+
+.profile-photo {
+  flex: 0 0 clamp(130px, 12vw, 175px);
+  width: clamp(130px, 12vw, 175px);
+  margin: 0.5rem 0 0;
+  position: relative;
+}
+
+.profile-photo::before {
+  content: "";
+  position: absolute;
+  inset: 8px -8px -8px 8px;
+  border: 1px solid var(--red);
+  z-index: -1;
 }
 
 .profile-photo img {
@@ -87,25 +113,27 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
-  filter: grayscale(15%);
-  border: 1px solid rgba(18, 51, 105, 0.25);
-  box-shadow: 14px 14px 0 rgba(18, 51, 105, 0.08);
+  border: 1px solid rgba(18, 51, 105, 0.2);
 }
 
-.profile-photo figcaption {
-  margin-top: 0.8rem;
-  color: var(--blue);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-align: right;
-  text-transform: uppercase;
-}
+@media (max-width: 700px) {
+  .hero-identity {
+    gap: 1.25rem;
+  }
 
-@media (max-width: 800px) {
   .profile-photo {
-    max-width: 260px;
-    justify-self: start;
-    margin-top: 2rem;
+    flex-basis: 95px;
+    width: 95px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-identity {
+    flex-direction: column;
+  }
+
+  .profile-photo {
+    width: 120px;
   }
 }
 </style>
@@ -114,11 +142,13 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
 <aside class="rail"><a class="monogram" href="#top">AHN</a><div class="vertical">人工知能・言語・知識</div><span class="seal">研究</span></aside>
 <header><nav><a href="#profile">Profile</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#service">Service</a></nav></header>
 <main>
-<section class="hero" id="top"><div><h1>ARBI HAZA<br>NASUTION</h1><p class="role">Professor of Artificial Intelligence<span>Director of Research and Community Service · Universitas Islam Riau</span></p><p class="lead">Research at the intersection of language, knowledge, and intelligent systems—with a commitment to multilingual and low-resource communities.</p><div class="links"><a href="mailto:arbi@eng.uir.ac.id">Email</a><a href="http://purse.uir.ac.id/author/arbi">UIR PURSE</a><a href="https://www.scopus.com/authid/detail.uri?authorId=6701746699">Scopus</a><a href="https://scholar.google.com/citations?user=I-wxoBYAAAAJ&hl=en">Google Scholar</a></div><a class="cta" href="#publications">View Publications <span>→</span></a></div>
-  <figure class="profile-photo">
-    <img src="./arbi.png" alt="Professor Arbi Haza Nasution">
-    <figcaption>Prof. Dr. Arbi Haza Nasution</figcaption>
-  </figure>
+<section class="hero" id="top"><div class="hero-content"><div class="hero-identity">
+      <figure class="profile-photo">
+        <img src="./arbi.png" alt="Professor Arbi Haza Nasution">
+      </figure>
+
+      <h1>ARBI HAZA<br>NASUTION</h1>
+    </div><p class="role">Professor of Artificial Intelligence<span>Director of Research and Community Service · Universitas Islam Riau</span></p><p class="lead">Research at the intersection of language, knowledge, and intelligent systems—with a commitment to multilingual and low-resource communities.</p><div class="links"><a href="mailto:arbi@eng.uir.ac.id">Email</a><a href="http://purse.uir.ac.id/author/arbi">UIR PURSE</a><a href="https://www.scopus.com/authid/detail.uri?authorId=6701746699">Scopus</a><a href="https://scholar.google.com/citations?user=I-wxoBYAAAAJ&hl=en">Google Scholar</a></div><a class="cta" href="#publications">View Publications <span>→</span></a></div>
 <div class="map" aria-label="Knowledge graph of Arbi Haza Nasution's research"><svg class="knowledge-svg" viewBox="0 0 620 570" role="img" aria-labelledby="kg-title kg-desc"><title id="kg-title">Arbi Haza Nasution research knowledge graph</title><desc id="kg-desc">Language Intelligence connects four research programmes to representative published contributions.</desc>
 <ellipse class="kg-halo" cx="310" cy="285" rx="280" ry="242"/>
 <path class="kg-edge" d="M310 285L166 157M310 285L452 157M310 285L166 410M310 285L452 410"/>
