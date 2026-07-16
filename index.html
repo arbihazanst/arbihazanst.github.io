@@ -74,6 +74,40 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
     width: 70px;
   }
 }
+.profile-photo {
+  align-self: end;
+  margin: 0;
+  max-width: 340px;
+  justify-self: center;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(15%);
+  border: 1px solid rgba(18, 51, 105, 0.25);
+  box-shadow: 14px 14px 0 rgba(18, 51, 105, 0.08);
+}
+
+.profile-photo figcaption {
+  margin-top: 0.8rem;
+  color: var(--blue);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .profile-photo {
+    max-width: 260px;
+    justify-self: start;
+    margin-top: 2rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -81,6 +115,10 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
 <header><nav><a href="#profile">Profile</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#service">Service</a></nav></header>
 <main>
 <section class="hero" id="top"><div><h1>ARBI HAZA<br>NASUTION</h1><p class="role">Professor of Artificial Intelligence<span>Director of Research and Community Service · Universitas Islam Riau</span></p><p class="lead">Research at the intersection of language, knowledge, and intelligent systems—with a commitment to multilingual and low-resource communities.</p><div class="links"><a href="mailto:arbi@eng.uir.ac.id">Email</a><a href="http://purse.uir.ac.id/author/arbi">UIR PURSE</a><a href="https://www.scopus.com/authid/detail.uri?authorId=6701746699">Scopus</a><a href="https://scholar.google.com/citations?user=I-wxoBYAAAAJ&hl=en">Google Scholar</a></div><a class="cta" href="#publications">View Publications <span>→</span></a></div>
+  <figure class="profile-photo">
+    <img src="./arbi.png" alt="Professor Arbi Haza Nasution">
+    <figcaption>Prof. Dr. Arbi Haza Nasution</figcaption>
+  </figure>
 <div class="map" aria-label="Knowledge graph of Arbi Haza Nasution's research"><svg class="knowledge-svg" viewBox="0 0 620 570" role="img" aria-labelledby="kg-title kg-desc"><title id="kg-title">Arbi Haza Nasution research knowledge graph</title><desc id="kg-desc">Language Intelligence connects four research programmes to representative published contributions.</desc>
 <ellipse class="kg-halo" cx="310" cy="285" rx="280" ry="242"/>
 <path class="kg-edge" d="M310 285L166 157M310 285L452 157M310 285L166 410M310 285L452 410"/>
@@ -114,11 +152,11 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
 <div class="hero index" id="research"><article><span class="num">01 /</span><h2>LLM Evaluation &amp; Robustness</h2><p>Adversarial behaviour, annotation quality, benchmarking, and explainability.</p></article><article><span class="num">02 /</span><h2>Low-Resource &amp; Multilingual NLP</h2><p>Language inclusion, named entity recognition, and multilingual understanding.</p></article><article><span class="num">03 /</span><h2>RAG &amp; Knowledge Systems</h2><p>Curated thematic corpora, Quranic studies, and dependable retrieval.</p></article><article><span class="num">04 /</span><h2>AI Applications &amp; Forecasting</h2><p>Time series, energy, agriculture, IoT, markets, and multimodal moderation.</p></article></div>
 
 <section class="section" id="profile"><div class="intro"><div><p class="kicker">Academic profile</p><h2>Language technology with global reach and local purpose.</h2></div><p>Arbi Haza Nasution is a computational linguistics and natural language processing scholar whose current research focuses on LLMs and Retrieval-Augmented Generation (RAG) for multilingual and low-resource language understanding. He earned his Ph.D. in Social Informatics from Kyoto University (2018) and his M.IT. in Management Information Systems (2012) and B.IT. in Computer Science (2010) from the National University of Malaysia (Universiti Kebangsaan Malaysia, UKM). He is currently a Professor in the Department of Informatics Engineering, Universitas Islam Riau, Indonesia. His research centers on bilingual lexicon induction, multilingual machine translation, and language technologies for low‑resource languages. In recognition of his contributions to inclusive language technologies and the preservation of low-resource languages, he was invited by UNESCO to participate in the first Language Technologies for All (LT4All) conference in 2021, and later again in 2025 for the second LT4All at UNESCO Headquarters in Paris.</p></div>
-<div class="records"><article class="record"><time>Current</time><div><h3>Director, Directorate of Research and Community Service</h3><p>Universitas Islam Riau</p></div><p>Leads institutional research development, grants, publication, innovation, and community-service programmes.</p></article><article class="record"><time>Current</time><div><h3>Professor of Artificial Intelligence</h3><p>Department of Informatics Engineering · UIR</p></div><p>Teaching, research, supervision, curriculum development, and scholarly service in AI, NLP, data science, and machine learning.</p></article><article class="record"><time>Since 2013</time><div><h3>Faculty Member</h3><p>Universitas Islam Riau</p></div><p>Academic teaching and research in computer science and informatics engineering.</p></article><article class="record"><time>2019</time><div><h3>Visiting Professor and Fellow</h3><p>Universiti Teknologi MARA, Perlis, Malaysia</p></div><p>Academic exchange, teaching, and research engagement at Arau Campus, 28 April–3 May 2019.</p></article><article class="record"><time>2018</time><div><h3>Ph.D. in Social Informatics</h3><p>Kyoto University, Japan</p></div><p>Dissertation: <em>Bilingual Lexicon Induction Framework for Closely Related Languages.</em> Indonesian Presidential Scholarship (LPDP).</p></article><article class="record"><time>2012</time><div><h3>M.IT. in Management Information Systems</h3><p>Universiti Kebangsaan Malaysia</p></div><p>Graduate study in management information systems and information technology.</p></article><article class="record"><time>2010</time><div><h3>B.IT. in Computer Science</h3><p>Universiti Kebangsaan Malaysia</p></div><p>Undergraduate study in computer science.</p></article></div></section>
+<div class="records"><article class="record"><time>Current</time><div><h3>Director, Directorate of Research and Community Service</h3><p>Universitas Islam Riau</p></div><p>Leads institutional research development, grants, publication, innovation, and community-service programmes.</p></article><article class="record"><time>Current</time><div><h3>Professor of Artificial Intelligence</h3><p>Department of Informatics Engineering · UIR</p></div><p>Teaching, research, supervision, curriculum development, and scholarly service in AI, NLP, data science, and machine learning.</p></article><article class="record"><time>2019</time><div><h3>Visiting Professor and Fellow</h3><p>Universiti Teknologi MARA, Perlis, Malaysia</p></div><p>Academic exchange, teaching, and research engagement at Arau Campus, 28 April–3 May 2019.</p></article><article class="record"><time>2018</time><div><h3>Ph.D. in Social Informatics</h3><p>Kyoto University, Japan</p></div><p>Dissertation: <em>Bilingual Lexicon Induction Framework for Closely Related Languages.</em> Indonesian Presidential Scholarship (LPDP).</p></article><article class="record"><time>2012</time><div><h3>M.IT. in Management Information Systems</h3><p>Universiti Kebangsaan Malaysia</p></div><p>Graduate study in management information systems and information technology.</p></article><article class="record"><time>2010</time><div><h3>B.IT. in Computer Science</h3><p>Universiti Kebangsaan Malaysia</p></div><p>Undergraduate study in computer science.</p></article></div></section>
 
 <section class="section" id="teaching"><div class="intro"><div><p class="kicker">Teaching</p><h2>From foundations to language intelligence.</h2></div><p>Courses connect theory, experimentation, and responsible application across intelligent systems and language technologies.</p></div><div class="courses"><article class="course"><small>STI2545136</small><h3>Data Science</h3></article><article class="course"><small>STI2544125</small><h3>Introduction to Artificial Intelligence</h3></article><article class="course"><small>TI210241</small><h3>Machine Translation</h3></article><article class="course"><small>TI210240</small><h3>Natural Language Processing</h3></article></div></section>
 
-<section class="section" id="projects"><div class="intro"><div><p class="kicker">Research grants</p><h2>Funded research with societal relevance.</h2></div><p>Major projects combine language technology, forecasting, multilingual communication, tourism, energy, and financial-market intelligence.</p></div><div class="grants"><article class="grant"><small>2026</small><h3>Real-Time Large Language Model-Based Machine Translation to Support Tourism and Multilingual Learning in Indonesia</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2025</small><h3>Real-Time Large Language Model-Based Machine Translation to Support Tourism and Multilingual Learning in Indonesia</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2024</small><h3>Pivot-Based Machine Translation for Indonesian Regional Languages to Support Communication Between International Tourists and Local Communities</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2024</small><h3>Large Language Model-Probabilistic Time-Series Forecasting for Discrepancy Value Determination at Oil and Gas Production Gathering Stations</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2021–2023</small><h3>World Language Lexical Similarity Clustering and Visualization System</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2023</small><h3>Application of Machine Learning in Stock Market Exchange</h3><p>International Joint Research Grant between Universiti Teknologi Petronas, Universiti Malaysia Pahang, Universitas Islam Riau, and Telkom University.</p></article></div></section>
+<section class="section" id="projects"><div class="intro"><div><p class="kicker">Research grants</p><h2>Funded research with societal relevance.</h2></div><p>Major projects combine language technology, forecasting, multilingual communication, tourism, energy, and financial-market intelligence.</p></div><div class="grants"><article class="grant"><small>2025-2026</small><h3>Real-Time Large Language Model-Based Machine Translation to Support Tourism and Multilingual Learning in Indonesia</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2024</small><h3>Pivot-Based Machine Translation for Indonesian Regional Languages to Support Communication Between International Tourists and Local Communities</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2024</small><h3>Large Language Model-Probabilistic Time-Series Forecasting for Discrepancy Value Determination at Oil and Gas Production Gathering Stations</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2021–2023</small><h3>World Language Lexical Similarity Clustering and Visualization System</h3><p>Ministry of Higher Education, Science, and Technology, Republic of Indonesia.</p></article><article class="grant"><small>2023</small><h3>Application of Machine Learning in Stock Market Exchange</h3><p>International Joint Research Grant between Universiti Teknologi Petronas, Universiti Malaysia Pahang, Universitas Islam Riau, and Telkom University.</p></article></div></section>
 
 <section class="section" id="publications"><div class="intro"><div><p class="kicker">Publications</p><h2>Selected publications, organized by research contribution.</h2></div><p>The research develops along a connected trajectory: from building bilingual lexical resources and machine-translation methods for multilingual and low-resource languages, to advancing classification and applied AI across social, environmental, financial, and industrial domains. This foundation now supports research on LLM evaluation, AI security and adversarial robustness, and retrieval-augmented knowledge systems—contributing toward language technologies that are more reliable, explainable, inclusive, and relevant to real-world needs.</p></div>
 <div class="filters">
