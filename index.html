@@ -132,9 +132,12 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
   width: 135px;
   height: auto;
   margin: 0;
+  overflow: visible;
 }
 
 .profile-photo img {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 100%;
   height: auto;
@@ -142,6 +145,20 @@ details{border-top:1px solid var(--line)}details:last-child{border-bottom:1px so
   object-fit: cover;
   object-position: center top;
   border: 1px solid rgba(18, 51, 105, 0.2);
+}
+
+/* Red crossing frame on the right and bottom */
+.profile-photo::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-right: 1.5px solid var(--red);
+  border-bottom: 1.5px solid var(--red);
+  pointer-events: none;
 }
 
 .map {
